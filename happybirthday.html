@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>वाढदिवसाच्या शुभेच्छा!</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background: linear-gradient(135deg, #ffeef9, #f8c8dc, #ffcccb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Floating Hearts */
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+}
+
+.container {
+    max-width: 850px;
+    width: 95%;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(255,105,180,0.3);
+}
+
+/* Happy Birthday Creative */
+.happy {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+/* H1 Title */
+h1 {
+    font-size: 30px;
+    color: #c71585;
+    margin-bottom: 25px;
+}
+
+/* H2 Text */
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-top: 25px;
+    color: #444;
+}
+
+/* Media */
+.media-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.reel-video {
+    width: 90%;
+    max-width: 360px;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+<div class="happy">Happy Birthday 🎉</div>
+
+<h1>
+वाढदिवसाच्या Advance हार्दिक शुभेच्छा! <br>
+माझ्या लाडक्या मावशीला वाढदिवसाच्या खुप खुप शुभेच्छा! <br>
+👩‍👧 ✨
+</h1>
+
+<!-- Photo -->
+<div class="media-container">
+    <img src="https://img.sanishtech.com/u/91c32378763076f6c54ef444860d0430.jpeg" alt="Mavshi" class="photo">
+</div>
+
+<!-- Video -->
+<div class="media-container">
+    <video class="reel-video" autoplay muted loop playsinline>
+        <source src="./VID_20260213_232831_564_bsl.mp4" type="video/mp4">
+    </video>
+</div>
+
+<h2>
+तू केवळ माझी मावशीच नाहीस, तर माझी दुसरी आई आणि उत्तम मैत्रीण सुद्धा आहेस.
+तुझे प्रेम आणि मार्गदर्शन नेहमीच माझ्या पाठीशी असते, त्याबद्दल मी तुझी खूप ऋणी आहे.
+येणारे वर्ष तुला उत्तम आरोग्य, सुख-समृद्धी आणि भरभरून आनंद घेऊन येवो,
+हीच ईश्वरचरणी प्रार्थना. तुझा वाढदिवस अतिशय आनंदाने आणि उत्साहात साजरा होवो!
+
+<br><br>
+पुन्हा एकदा तुला वाढदिवसाच्या Advance शुभेच्छा!
+</h2>
+
+<h2>
+Happy Valentine Day ❤️🫂🌍 <br>
+💕🎉🥳
+</h2>
+
+</div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+    document.getElementById("hearts").appendChild(heart);
+    setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
